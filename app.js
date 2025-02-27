@@ -10,13 +10,28 @@ function compararVariables(variableUno, variableDos) {
         console.log('las variables son iguales tanto en valor como en tipo');
     } else if (variableUno == variableDos) {
         console.log('las variables son iguales en valor pero no en tipo');
-    }else {
+    } else {
         console.log('las variables no tienen el mismo valor');
     }
-}
+};
 
 compararVariables(numeroUn, stringUn);
 
-compararVariables(numeroTreinta, stringTreinta);    
+compararVariables(numeroTreinta, stringTreinta);
 
 compararVariables(numeroDiez, stringDiez);
+
+
+let respuestaUsuario = parseInt(prompt('¿¿Te gusta estudiar JavaScript? Responde con el número 1 para SÍ o 2 para NO.?'));
+
+if (respuestaUsuario == 1) {
+    console.log('¡Muy bien! Sigue estudiando y tendrás mucho éxito');
+    alert('¡Muy bien! Sigue estudiando y tendrás mucho éxito');
+}
+else if(respuestaUsuario == 2) {   
+    console.log('Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?');
+    alert('Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?');
+}else{
+    console.log('Respuesta no válida');
+    alert('Respuesta no válida');
+};
