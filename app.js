@@ -1,4 +1,4 @@
-/*
+/* primer reto
 let numeroUn = 1;
 let stringUn = '1';
 let numeroTreinta = 30;
@@ -15,7 +15,8 @@ function compararVariables(variableUno, variableDos) {
         console.log('las variables no tienen el mismo valor');
     }
 };
-
+*/
+/* 2 reto
 compararVariables(numeroUn, stringUn);
 
 compararVariables(numeroTreinta, stringTreinta);
@@ -37,6 +38,7 @@ else if(respuestaUsuario == 2) {
 };
 */
 
+/* 3 reto
 let programasDeProgramación = [];
 
 let respuestaUsuario = prompt('¿Quieres continuar con el area de Front-End (1) o seguir al area de Back-End (2)?');
@@ -84,4 +86,27 @@ function preguntaEspecialización(){
             programasUsuario = prompt('en qué tecnologías le gustaria especializarse');
         }
     }
+}
+*/
+
+let numeroSecreto = Math.floor(Math.random() * 10) + 1;
+let intentos = 1;
+let respuestaUsuario = parseInt(prompt('Adivina el número secreto entre 1 y 10'));
+
+if (respuestaUsuario === numeroSecreto) {
+    console.log('¡Felicidades! Adivinaste el número secreto');
+    alert('¡Felicidades! Adivinaste el número secreto');
+}
+else {
+    while (respuestaUsuario !== numeroSecreto) {
+        intentos++;
+        if (respuestaUsuario < numeroSecreto) {
+            respuestaUsuario = parseInt(prompt('El número secreto es mayor, intenta de nuevo'));
+        }
+        else if (respuestaUsuario > numeroSecreto) {
+            respuestaUsuario = parseInt(prompt('El número secreto es menor, intenta de nuevo'));
+        }
+    }
+    console.log(`¡Felicidades! Adivinaste el número secreto en ${intentos} intentos`);
+    alert(`¡Felicidades! Adivinaste el número secreto en ${intentos} intentos`);
 }
