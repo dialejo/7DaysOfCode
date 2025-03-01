@@ -89,6 +89,7 @@ function preguntaEspecialización(){
 }
 */
 
+/* 4 reto
 let numeroSecreto = Math.floor(Math.random() * 10) + 1;
 let intentos = 1;
 let respuestaUsuario = parseInt(prompt('Adivina el número secreto entre 1 y 10'));
@@ -110,3 +111,101 @@ else {
     console.log(`¡Felicidades! Adivinaste el número secreto en ${intentos} intentos`);
     alert(`¡Felicidades! Adivinaste el número secreto en ${intentos} intentos`);
 }
+*/
+
+/*
+	1.	Alimentos Frescos – Frutas, verduras, carnes, embutidos, lácteos, huevos.
+	2.	Panadería y Pastelería – Pan, galletas, bizcochos, postres.
+	3.	Abarrotes – Arroz, pastas, aceites, enlatados, salsas, azúcar.
+	4.	Bebidas – Agua, jugos, gaseosas, café, té, bebidas alcohólicas.
+	5.	Congelados – Carnes, mariscos, comidas preparadas, helados.
+	6.	Snacks y Dulces – Chocolates, papas fritas, frutos secos.
+	7.	Cuidado Personal – Higiene, cosmética, protección solar.
+	8.	Limpieza y Hogar – Detergentes, papel higiénico, ambientadores.
+	9.	Mascotas – Alimentos, higiene, accesorios.
+	10.	Bebés – Pañales, alimentos, productos de higiene.
+	11.	Electrodomésticos y Tecnología – Pequeños electrodomésticos, baterías.
+	12.	Ferretería y Automotriz – Herramientas, productos para autos.
+*/
+
+
+let frutasVegetales =[];
+let congelados = [];
+let bebidas =[];
+let abarrotes = [];
+let panaderia = [];
+let snacks = [];
+let cuidadoPersonal = [];
+let limpiezaHogar = [];
+let mascotas = [];
+
+let respuestaUsuario = prompt('¿Qué tipo de productos deseas agregar a tu lista de compras? \n 1. Alimentos Frescos \n 2. Congelados \n 3. Bebidas \n 4. Abarrotes \n 5. Panadería \n 6. Snacks y Dulces \n 7. Cuidado Personal \n 8. Limpieza y Hogar \n 9. Mascotas');
+
+if (respuestaUsuario == 1) {
+    let respuestaUsuarioFrutas = prompt('¿Qué frutas o verduras deseas agregar a tu lista de compras?');
+    while (respuestaUsuarioFrutas != 'salir' && respuestaUsuarioFrutas !== null) {
+        frutasVegetales.push(respuestaUsuarioFrutas);
+        respuestaUsuarioFrutas = prompt('¿Qué frutas o verduras deseas agregar a tu lista de compras?');
+    }
+    console.log(frutasVegetales);
+} else if (respuestaUsuario == 2) {
+    let respuestaUsuarioCongelados = prompt('¿Qué productos congelados deseas agregar a tu lista de compras?');
+    while (respuestaUsuarioCongelados != 'salir' && respuestaUsuarioCongelados !== null) {
+        congelados.push(respuestaUsuarioCongelados);
+        respuestaUsuarioCongelados = prompt('¿Qué productos congelados deseas agregar a tu lista de compras?');
+    }
+    console.log(congelados);
+} else if (respuestaUsuario == 3) {
+        let respuestaUsuarioBebidas = prompt('¿Qué bebidas deseas agregar a tu lista de compras?');
+        while (respuestaUsuarioBebidas != 'salir' && respuestaUsuarioBebidas !== null) {
+            bebidas.push(respuestaUsuarioBebidas);
+            respuestaUsuarioBebidas = prompt('¿Qué bebidas deseas agregar a tu lista de compras?');
+        }
+        console.log(bebidas);
+}else if (respuestaUsuario == 4) {
+    let respuestaUsuarioAbarrotes = prompt('¿Qué abarrotes deseas agregar a tu lista de compras?');
+    while (respuestaUsuarioAbarrotes != 'salir' && respuestaUsuarioAbarrotes !== null) {
+        abarrotes.push(respuestaUsuarioAbarrotes);
+        respuestaUsuarioAbarrotes = prompt('¿Qué abarrotes deseas agregar a tu lista de compras?');
+    }
+    console.log(abarrotes);        
+} else if (respuestaUsuario == 5) {
+        let respuestaUsuarioPanaderia = prompt('¿Qué productos de panadería deseas agregar a tu lista de compras?');
+        while (respuestaUsuarioPanaderia != 'salir' && respuestaUsuarioPanaderia !== null) {
+            panaderia.push(respuestaUsuarioPanaderia);
+            respuestaUsuarioPanaderia = prompt('¿Qué productos de panadería deseas agregar a tu lista de compras?');
+        }
+        console.log(panaderia);
+}else if (respuestaUsuario == 6) { 
+    let respuestaUsuarioSnacks = prompt('¿Qué snacks o dulces deseas agregar a tu lista de compras?');
+    while (respuestaUsuarioSnacks != 'salir' && respuestaUsuarioSnacks !== null) {
+        snacks.push(respuestaUsuarioSnacks);
+        respuestaUsuarioSnacks = prompt('¿Qué snacks o dulces deseas agregar a tu lista de compras?');
+    }
+    console.log(snacks);
+}else if (respuestaUsuario == 7) {
+        let respuestaUsuarioCuidadoPersonal = prompt('¿Qué productos de cuidado personal deseas agregar a tu lista de compras?');
+        while (respuestaUsuarioCuidadoPersonal != 'salir' && respuestaUsuarioCuidadoPersonal !== null) {
+            cuidadoPersonal.push(respuestaUsuarioCuidadoPersonal);
+            respuestaUsuarioCuidadoPersonal = prompt('¿Qué productos de cuidado personal deseas agregar a tu lista de compras?');
+        }
+        console.log(cuidadoPersonal);
+    } else if (respuestaUsuario == 8) {
+            let respuestaUsuarioLimpiezaHogar = prompt('¿Qué productos de limpieza y hogar deseas agregar a tu lista de compras?');
+            while (respuestaUsuarioLimpiezaHogar != 'salir' && respuestaUsuarioLimpiezaHogar !== null) {
+                limpiezaHogar.push(respuestaUsuarioLimpiezaHogar);
+                respuestaUsuarioLimpiezaHogar = prompt('¿Qué productos de limpieza y hogar deseas agregar a tu lista de compras?');
+            }
+            console.log(limpiezaHogar);
+    } else if (respuestaUsuario == 9) {
+        let respuestaUsuarioMascotas = prompt('¿Qué productos para mascotas deseas agregar a tu lista de compras?');
+        while (respuestaUsuarioMascotas != 'salir' && respuestaUsuarioMascotas !== null) {
+            mascotas.push(respuestaUsuarioMascotas);
+            respuestaUsuarioMascotas = prompt('¿Qué productos para mascotas deseas agregar a tu lista de compras?');
+        }
+        console.log(mascotas);
+    };
+
+    alert(`lista productos de frutas y verduras: ${frutasVegetales}`);
+    alert('¡Lista de compras generada con éxito!');
+    alert('¡Gracias por utilizar nuestra aplicación!');
